@@ -33,7 +33,10 @@ func TestInsert(t *testing.T) {
 }
 
 func TestSearch(t *testing.T) {
-    if !bst.Search(1) || ! bst.Search(8) || bst.Search(5) {
+    // Setup the tree
+    fillTree(&bst)
+
+    if !bst.Search(1) || !bst.Search(8) || !bst.Search(5) {
         bst.PrintTree()
         t.Error("Failed to find elements 1, 8 and 5 which are know to be ins tree")
     }
