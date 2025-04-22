@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// Objective is to implement type assertion 
+
 type Developer struct {
 	Name string
 	Age  int
